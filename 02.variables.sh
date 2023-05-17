@@ -11,8 +11,9 @@ echo name = ${name}
 echo todays date is $(date)
 
 #proper code
-Date1=$(date +%F)
 
+# for the variable taging the cmd should be taged in the proper way with  $(cmd)
+Date1=$(date +%F)
 
 Day1=$(date +%e)
 
