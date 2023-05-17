@@ -11,7 +11,7 @@ Date=12-05-2023
 echo todays date is ${Date}
 
 #proper code
-Date1='date +%f'
+Date1='date +%F'
 
 
 Day1='date +%e'
