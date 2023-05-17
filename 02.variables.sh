@@ -8,7 +8,7 @@ echo a = $a
 echo name = ${name}
 
 #Date=12-05-2023
-echo todays date is ${date}
+echo todays date is $(date)
 
 #proper code
 Date1='date +%F'
