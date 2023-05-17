@@ -14,7 +14,7 @@ echo todays date is $(date)
 Date1=$(date +%F)
 
 
-Day1='date +%e'
+Day1=$(date +%e)
 
 echo todays date is ${Date1}
 
