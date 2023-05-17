@@ -11,10 +11,11 @@ Date=12-05-2023
 echo todays date is ${Date}
 
 #proper code
-Date=date +%f
+Date1=date +%a
 
-Day=date +%e
 
-echo todays date is ${Date}
+Day1=date +%e
 
-echo day of the month $Day
+echo todays date is ${Date1}
+
+echo day of the month $Day1
