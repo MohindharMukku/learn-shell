@@ -11,7 +11,7 @@ echo name = ${name}
 echo todays date is $(date)
 
 #proper code
-Date1='date +%F'
+Date1=$(date +%F)
 
 
 Day1='date +%e'
