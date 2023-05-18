@@ -43,5 +43,5 @@ echo dirpath
 
 echo -e "\e[31m>>>>>>>>>> testing the special variable <<<<<<<<<<\e[0m"
 
-script=$(realpath $0)
+script=$(realpath "$0")
 script_path=$(dirname "$script")
