@@ -37,3 +37,5 @@ echo test1 ${math2}
 # special variables
 
 echo script name $0
+
+echo dirpath
