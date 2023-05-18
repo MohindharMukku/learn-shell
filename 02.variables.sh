@@ -33,3 +33,7 @@ math2=$(((10-4)/2))
 echo test0 ${math1}
 
 echo test1 ${math2}
+
+# special variables
+
+echo script name $0
