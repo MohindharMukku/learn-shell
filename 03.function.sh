@@ -14,7 +14,7 @@ if [ -z "$input" ]; then
   echo Tvshow name is missing
 else
   echo Tv shox name $1
-  exit
+#  exit
 fi
 
 percent=$(curl -s  https://www.themoviedb.org/tv/$input | grep -w user_score_chart | grep data-percent | xargs -n1 | grep 86 |awk -F = '{print $2}' | awk -F . '{print $1}')
