@@ -9,11 +9,18 @@
 #Flop           - 40-59
 #Disaster       - 00-39
 
-----------------------------------------------------
-input=$1
+#----------------------------------------------------
 
-title=$1
-clean_title="${title#*-}"
+script=$(pwd "$0")
+echo $script
+
+script1=$(realpath "$0")
+script_path=$(dirname "$script1")
+echo $script_path
+
+
+input=$1
+clean_title="${input#*-}"
 
 percent=$(curl -s  https://www.themoviedb.org/tv/$input | grep -w user_score_chart | xargs -n1 | grep data-percent | awk -F = '{print $2}' | awk -F . '{print $1}')
 
