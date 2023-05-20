@@ -14,17 +14,33 @@ input=$1
 percent=$(curl -s  https://www.themoviedb.org/tv/$input | grep -w user_score_chart | xargs -n1 | grep data-percent | awk -F = '{print $2}' | awk -F . '{print $1}')
 
 
-if [ "$percent" -ge 89  ]; then
-  echo The tv show Average
+if [ "$percent" -le  39  ]; then
+  echo The Tv show is Disaster
+
+elif [ "$percent" -le 59  ]; then
+  echo The Tv show is Flop
+
+elif [ "$percent" -le 79 ]; then
+  echo The TV show is Average
+
+elif [ "$percent" -le 89 ]; then
+  echo The Tv show is Above Average
+
+elif [ "$percent" -le 94 ]; then
+  echo The Tv show is  Hit
+
+elif [ "$percent" -le 100  ]; then
+  echo The Tv show is Blockbuster
+
 else
-  echo the tv show is okay
+  echo the tv show is $1
 fi
 
 
 
-if [ -z "$input" ]; then
-  echo Tvshow name is missing
-else
-  echo Tv shox name $percent
+#if [ -z "$input" ]; then
+#  echo Tvshow name is missing
+#else
+#  echo Tv shox name $percent
 #  exit
-fi
+#fi
