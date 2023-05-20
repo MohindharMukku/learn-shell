@@ -10,23 +10,22 @@
 #Disaster       - 00-39
 
 input=$1
-if [ -z "$input" ]; then
-  echo Tvshow name is missing
-else
-  echo Tv shox name $1
-#  exit
-fi
 
 percent=$(curl -s  https://www.themoviedb.org/tv/$input | grep -w user_score_chart | grep data-percent | xargs -n1 | grep 86 |awk -F = '{print $2}' | awk -F . '{print $1}')
 
 
 if [ -z "$input" ]; then
-  echo tv show name is missing
 
-else [ $percent -ge 00 -a $percent -le 89 ]; then
+else [ $percent -ge  89 ]; then
   echo The tv show Average
 
 fi
 
 
 
+if [ -z "$input" ]; then
+  echo Tvshow name is missing
+else
+  echo Tv shox name $1
+#  exit
+fi
