@@ -11,11 +11,10 @@
 
 input=$1
 
-percent=$(curl -s  https://www.themoviedb.org/tv/$input | grep -w user_score_chart | grep data-percent | xargs -n1 | grep 86 |awk -F = '{print $2}' | awk -F . '{print $1}')
+percent=$(curl -s  https://www.themoviedb.org/tv/$input | grep -w user_score_chart | grep data-percent | xargs -n1  |awk -F = '{print $2}' | awk -F . '{print $1}')
 
 
 if [ "$percent" -ge 89  ]; then
-
   echo The tv show Average
 else
   echo the tv show is okay
