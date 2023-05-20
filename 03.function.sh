@@ -26,19 +26,19 @@ if [ -z "$input" ]; then
 else [ $percent -ge 00 -a $percent -le 39 ]; then
   echo The tv show is Disaster
 
-elseif [ $percent -ge 40 -a $percent -le 59 ]; then
+else [ $percent -ge 40 -a $percent -le 59 ]; then
   echo The tv show is Flop
 
-elseif [ $percent -ge 60 -a $percent -le 79 ]; then
+else [ $percent -ge 60 -a $percent -le 79 ]; then
   echo The tv show is average
 
-elseif [ $percent -ge 80 -a $percent -le 89 ]; then
+else [ $percent -ge 80 -a $percent -le 89 ]; then
   echo The tv show is Above Average
 
-elseif [ $percent -ge 90 -a $percent -le 94 ]; then
+else [ $percent -ge 90 -a $percent -le 94 ]; then
   echo The tv show is hit
 
-elseif [ $percent -ge 95 -a $percent -le 100 ]; then
+else [ $percent -ge 95 -a $percent -le 100 ]; then
   echo The tv show is Blockbuster
 
 fi
