@@ -15,25 +15,25 @@ percent=$(curl -s  https://www.themoviedb.org/tv/$input | grep -w user_score_cha
 
 
 if [ "$percent" -le  39  ]; then
-  echo The Tv show is Disaster
+  echo The Tv show $input is Disaster
 
 elif [ "$percent" -le 59  ]; then
-  echo The Tv show is Flop
+  echo The Tv show $input is Flop
 
 elif [ "$percent" -le 79 ]; then
-  echo The TV show is Average
+  echo The TV show $Input is Average
 
 elif [ "$percent" -le 89 ]; then
-  echo The Tv show is Above Average
+  echo The Tv show $input is Above Average
 
 elif [ "$percent" -le 94 ]; then
-  echo The Tv show is  Hit
+  echo The Tv show $input is  Hit
 
 elif [ "$percent" -le 100  ]; then
-  echo The Tv show is Blockbuster
+  echo The Tv show $input is Blockbuster
 
 else
-  echo the tv show is $1
+  echo The Tv show is $input
 fi
 
 
