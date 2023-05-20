@@ -13,7 +13,7 @@ input=$1
 
 percent=$(curl -s  https://www.themoviedb.org/tv/$input | grep -w user_score_chart | xargs -n1 | grep data-percent | awk -F = '{print $2}' | awk -F . '{print $1}')
 
-premiered=$(curl https://www.themoviedb.org/tv/$input | grep -w premiered | xargs -l| sed 's/<\/\?p>//g' | awk '{print $6,$7,$8,$9}')
+premiered=$(curl -s https://www.themoviedb.org/tv/$input | grep -w premiered | xargs -l| sed 's/<\/\?p>//g' | awk '{print $6,$7,$8,$9}')
 
 
 if [ "$percent" -le  39  ]; then
