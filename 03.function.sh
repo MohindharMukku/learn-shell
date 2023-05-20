@@ -17,31 +17,31 @@ else
   exit
 fi
 
-#percent=$(curl -s  https://www.themoviedb.org/tv/$input | grep -w user_score_chart | grep data-percent | xargs -n1 | grep 86 |awk -F = '{print $2}' | awk -F . '{print $1}')
+percent=$(curl -s  https://www.themoviedb.org/tv/$input | grep -w user_score_chart | grep data-percent | xargs -n1 | grep 86 |awk -F = '{print $2}' | awk -F . '{print $1}')
 
 
-#if [ -z "$input" ]; then
-#  echo tv show name is missing
+if [ -z "$input" ]; then
+  echo tv show name is missing
 
-#else [ $percent -ge 00 -a $percent -le 39 ]; then
-#  echo The tv show is Disaster
+else [ $percent -ge 00 -a $percent -le 39 ]; then
+  echo The tv show is Disaster
 
-#else [ $percent -ge 40 -a $percent -le 59 ]; then
-#  echo The tv show is flop
+elseif [ $percent -ge 40 -a $percent -le 59 ]; then
+  echo The tv show is Flop
 
-#else [ $percent -ge 60 -a $percent -le 79 ]; then
-#  echo The tv show is average
+elseif [ $percent -ge 60 -a $percent -le 79 ]; then
+  echo The tv show is average
 
-#else [ $percent -ge 80 -a $percent -le 89 ]; then
-#  echo The tv show is Above Average
+elseif [ $percent -ge 80 -a $percent -le 89 ]; then
+  echo The tv show is Above Average
 
-#else [ $percent -ge 90 -a $percent -le 94 ]; then
-#  echo The tv show is hit
+elseif [ $percent -ge 90 -a $percent -le 94 ]; then
+  echo The tv show is hit
 
-#else [ $percent -ge 95 -a $percent -le 100 ]; then
-#  echo The tv show is Blockbuster
+elseif [ $percent -ge 95 -a $percent -le 100 ]; then
+  echo The tv show is Blockbuster
 
-#fi
+fi
 
 
 
