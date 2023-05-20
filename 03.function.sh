@@ -25,6 +25,6 @@ fi
 if [ -z "$input" ]; then
   echo Tvshow name is missing
 else
-  echo Tv shox name $1
+  echo Tv shox name $percent
 #  exit
 fi
