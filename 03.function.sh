@@ -13,6 +13,8 @@ input=$1
 
 percent=$(curl -s  https://www.themoviedb.org/tv/$input | grep -w user_score_chart | xargs -n1 | grep data-percent | awk -F = '{print $2}' | awk -F . '{print $1}')
 
+show_name=
+
 
 if [ "$percent" -le  39  ]; then
   echo The Tv show $input is Disaster
